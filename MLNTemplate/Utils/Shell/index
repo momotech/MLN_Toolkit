@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>
+MMLua
+</title>
+<script type="text/javascript" src="http://static.runoob.com/assets/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://static.runoob.com/assets/qrcode/qrcode.min.js"></script>
+</head>
+<body>
+
+<select id="select" style="width: 50%">
+addhere
+</select>
+<input id="text" type="text" value="" style="width:80%" />
+<div id="qrcode" style="width:200px; height:200px; margin-top:15px;"></div>
+
+<script type="text/javascript">
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+	width : 200,
+	height : 200
+});
+var ip = "172"
+var user = "X"
+
+function makeCodeByText() {
+	var elText = document.getElementById("text");
+	if (!elText.value) {
+		return;
+	}
+	qrcode.makeCode(elText.value);
+}
+
+function setText(t) {
+	var elText = document.getElementById("text");
+	elText.value=t
+	makeCodeByText()
+}
+
+function makeCode () {		
+	var elText = document.getElementById("select");
+	
+	if (!elText.value) {
+		return;
+	}
+	var prefix = "http://" + ip + "/~" + user + "/" + elText.value
+	
+	setText(prefix)
+}
+
+makeCode();
+
+$("#select").
+	on("change", function () {
+		makeCode()
+	})
+$("#text").
+	on("keydown", function (e) {
+		if (e.keyCode == 13) {
+			makeCodeByText();
+		}
+	});
+</script>
+
+</body>
+</html>
