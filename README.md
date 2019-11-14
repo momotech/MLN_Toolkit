@@ -10,7 +10,7 @@
 #### 一.安装IDE
 1. 下载最新的IEEA,推荐社区版本,无需注册码([IEDA](http://www.jetbrains.com/idea/download/#section=mac))
 2. 为IDEA安装Lua插件 EmmyLua  
-IEDA->Preferences->Plugins, 搜错EmmyLua下载并安装   
+IEDA->Preferences->Plugins, 搜索EmmyLua下载并安装   
 3. 为IDEA安装Bash插件 BashSupport  
 IDEA->Preferences->Plugins, 搜索BashSupport下载并安装    
 4. 为IDEA安装热更新插件LuaNative    
