@@ -6,11 +6,9 @@
 
 
 
---label = Label()
---label:setGravity(Gravity.CENTER)
---label:text("Hello World!")
---window:addView(label)
+label = Label()
+label:setGravity(Gravity.CENTER)
+label:text("Hello World!")
+window:addView(label)
 
---点击屏幕，弹Toast Demo
---require("LuaComponent.MLToast.MLToastDemo")
 
